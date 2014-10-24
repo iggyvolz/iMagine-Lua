@@ -45,5 +45,5 @@ function inputParser (text)
          end
       end
    end
-   return text,subject,action,unpack(params)
+   return text,subject,action,params
 end
