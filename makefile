@@ -7,7 +7,7 @@ buildtests:
 	@$(foreach file,$(files),cat "includes/$(file)_test.lua">>test.lua;)
 runtests:
 	@busted test.lua
-test: buildtests runtests
+test: testlua buildtests runtests
 testlua:
 	@wget http://www.lua.org/tests/$(luaversion)/lua-$(luaversion).$(luapatch)-tests.tar.gz
 	@tar xf lua-$(luaversion).$(luapatch)-tests.tar.gz
