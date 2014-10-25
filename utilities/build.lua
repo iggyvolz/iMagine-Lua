@@ -74,6 +74,10 @@ function serialize(d)
 end
 
 buildvars={
-  ["git-describe"]=shell("git describe --tags")
+  ["git"]={
+    ["describe"]=shell("git describe --tags")[1],
+    ["hash"]=shell("git log -1 --pretty=%H")[1],
+    ["message"]=shell("git log -1 --pretty=%B")[1]
+  }
 }
 print(serialize(buildvars))
