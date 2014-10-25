@@ -1,4 +1,4 @@
-files:= inputparser person dreamcreature version
+files:= inputparser person dreamcreature version help
 luaversion:= 5.2
 luapatch:= 2
 build:
