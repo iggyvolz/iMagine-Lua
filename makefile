@@ -3,8 +3,8 @@ luaversion:= 5.2
 luapatch:= 2
 buildtests:
 	@rm -f test.lua
-	@$(foreach file,$(files),echo "require \"includes/$(file)\"">>test.lua;)
-	@$(foreach file,$(files),cat "includes/$(file)_test.lua">>test.lua;)
+	@$(foreach file,$(files),echo "require \"src/$(file)\"">>test.lua;)
+	@$(foreach file,$(files),cat "src/$(file)_test.lua">>test.lua;)
 runtests:
 	@busted test.lua
 test: testlua buildtests runtests
