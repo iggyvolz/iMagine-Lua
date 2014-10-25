@@ -1,4 +1,4 @@
-files:= inputparser
+files:= inputparser person
 buildtests:
 	rm -f test.lua
 	$(foreach file,$(files),@echo "require \"includes/$(file)\"">>test.lua)
