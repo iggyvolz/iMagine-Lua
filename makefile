@@ -2,7 +2,7 @@ files:= inputparser person dreamcreature
 luaversion:= 5.2
 luapatch:= 2
 build:
-	@lua utilites/build.lua
+	@lua utilites/build.lua>src/build.lua
 buildtests:
 	@rm -f test.lua
 	@$(foreach file,$(files),echo "require \"src/$(file)\"">>utilities/test.lua;)
