@@ -28,6 +28,12 @@ function inputParser (text)
       if stage==2 and continue~=1 then
          if char=="(" then
             stage=3
+            if #text==i then
+              break
+            end
+            if text:sub(i+1,i+1) == ")" then
+              break
+            end
             table.insert(params,"")
             continue=1
          else
