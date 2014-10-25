@@ -1,0 +1,6 @@
+.project
+.settings
+bin
+src/iMagineVersion.as
+.settings
+test.lua
