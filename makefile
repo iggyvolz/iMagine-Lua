@@ -9,7 +9,7 @@ buildtests:
 	@$(foreach file,$(files),cat "src/$(file)_test.lua">>utilities/test.lua;)
 runtests:
 	@busted utilities/test.lua
-test: testlua buildtests runtests
+test: build testlua buildtests runtests
 testlua:
 	@wget http://www.lua.org/tests/$(luaversion)/lua-$(luaversion).$(luapatch)-tests.tar.gz
 	@tar xf lua-$(luaversion).$(luapatch)-tests.tar.gz
