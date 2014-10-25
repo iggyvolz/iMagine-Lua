@@ -24,6 +24,6 @@ if not help then
 end
 describe("Help",function()
   it("should return {_(\"Please see http://iggyvolz.github.io/iMagine/documentation.html for help\"),_(\"NOTE: still in development so this documentation is likely irrelevant\")}",function()
-    assert.are.same({_("Please see http://iggyvolz.github.io/iMagine/documentation.html for help"),_("NOTE: still in development so this documentation is likely irrelevant")},help)
+    assert.are.same({_("Please see http://iggyvolz.github.io/iMagine/documentation.html for help"),_("NOTE: still in development so this documentation is likely irrelevant")},help())
   end)
 end)
